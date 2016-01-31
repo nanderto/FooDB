@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Threading;
-using log4net;
 
 namespace FooCore
 {
-	public sealed class TreeDiskNodeManager<K, V> : ITreeNodeManager<K, V>
+    public sealed class TreeDiskNodeManager<K, V> : ITreeNodeManager<K, V>
 	{
 		readonly IRecordStorage recordStorage;
 		readonly Dictionary<uint, TreeNode<K, V>> dirtyNodes = new Dictionary<uint, TreeNode<K, V>> ();
